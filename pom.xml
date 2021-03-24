@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.thoth</groupId>
+    <artifactId>thoth-derby</artifactId>
+    <version>1.0.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>thoth-derby</name>
+    <description>Research on the Apache Derby database</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <!--
+     | Organization info
+     | Site - Project Information - Summary
+    -->
+    <organization>
+        <name>The Ferris Foundation</name>
+        <url>https://github.com/mjremijan</url>
+    </organization> 
+    
+    <!--
+     | License info
+     | Site - Project Information - Licenses
+    -->
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>   
+    
+   <!--
+     | Team info
+     | Site - Project Information - Team
+    -->
+    <developers>
+        <developer>
+            <!-- if you have a gravatar image with this email it will show -->
+            <email>mjremijan@yahoo.com</email>
+            <id>mjremijan</id>
+            <name>Michael Remijan</name>
+            <organization>The Ferris Foundation</organization>			
+            <organizationUrl />
+            <properties>
+                <twitter>@mjremijan</twitter>
+                <!-- picUrl></picUrl> Use this if no gravatar image -->
+            </properties>
+            <roles>
+                <role>Project Owner</role>
+                <role>Architect</role>
+                <role>Lead Developer</role>
+            </roles>
+            <timezone>America/Chicago</timezone>
+            <url>http://www.linkedin.com/in/mjremijan</url>
+        </developer>
+    </developers>  
+    
+    <!--
+     | Configure build options
+    -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                </plugin>
+            </plugins>                                    
+        </pluginManagement>
+        <plugins> 
+            <!--
+             | Configure compiler
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <release>11</release>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+        
+    <dependencies>
+<!--        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.14.2.0</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>10.14.2.0</version>
+        </dependency>-->
+        
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.15.2.0</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>10.15.2.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
