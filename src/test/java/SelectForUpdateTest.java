@@ -89,7 +89,9 @@ public class SelectForUpdateTest {
         ResultSet rs
             = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE).executeQuery(
                   " select feed_id, entry_id, published_on, last_found_on "
-                + " from rss_entry_history "
+                + " from rss_entry_history "                
+                + " where "
+                + " feed_id is not null "
                 + " for update of last_found_on "
                 + " ");
         
